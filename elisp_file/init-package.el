@@ -34,6 +34,8 @@
 
 ;;显示行号
 (global-linum-mode t)
+;;补全模式
+(global-company-mode 1)
 
 (ivy-mode 1)
 (setq ivy-use-virtual-buffers t)
@@ -44,12 +46,16 @@
 (global-hungry-delete-mode)
 ;;(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
 ;;括号自动补齐
-(require 'smartparens-config)
+;;(require 'smartparens-config)
 (smartparens-global-mode t)
 
 (setq auto-mode-alist
       (append
        '(("\\.js\\'" . js2-mode))
        auto-mode-alist))
+
+
+;;选中后输入删除原文本
+(delete-selection-mode 1)
 
 (provide 'init-package)
