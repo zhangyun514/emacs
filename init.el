@@ -70,6 +70,8 @@
 (global-linum-mode t)
 ;;禁止生成备份文件
 (setq make-backup-files nil)
+(setq auto-save-default nil)
+
 ;;关闭工具栏
 (tool-bar-mode -1)
 ;;补全模式
